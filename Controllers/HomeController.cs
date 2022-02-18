@@ -22,20 +22,20 @@ namespace RandomPasscode.Controllers
         public IActionResult Index()
         {
             if (HttpContext.Session.GetInt32("count") == null)
-        {
-        HttpContext.Session.SetInt32("count", 1);
-        }
-        else
-        {
-        int? temp = HttpContext.Session.GetInt32("count");
-        temp += 1;
-        HttpContext.Session.SetInt32("count", (int)temp);
-        }
+            {
+                HttpContext.Session.SetInt32("count", 1);
+            }
+            else
+            {
+                int? temp = HttpContext.Session.GetInt32("count");
+                temp += 1;
+                HttpContext.Session.SetInt32("count", (int)temp);
+            }
 
-        RandomGen passcode = new RandomGen();
-        passcode.Passcode();
+            RandomGen passcode = new RandomGen();
+            passcode.Passcode();
 
-        return View("Index", passcode);
+            return View("Index", passcode);
 
         }
 

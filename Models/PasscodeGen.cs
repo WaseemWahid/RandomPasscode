@@ -6,7 +6,7 @@ namespace RandomPasscode.Models
     public class RandomGen
     {
         public string result = "";
-        static string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        static string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!?$&#";
         int charactersLength = characters.Length;
 
         public string Passcode()
